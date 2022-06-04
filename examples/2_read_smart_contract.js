@@ -1,4 +1,5 @@
 const { ethers } = require("ethers");
+require('dotenv').config();
 
 const INFURA_ID = process.env.PRIVATE_KEY;
 

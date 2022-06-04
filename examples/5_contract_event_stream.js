@@ -1,6 +1,7 @@
 const { ethers } = require("ethers");
+require('dotenv').config();
 
-const INFURA_ID = '5fc3736954c847d18acfb32d5c762cb7'
+const INFURA_ID = process.env.PRIVATE_KEY;
 const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/${INFURA_ID}`)
 
 const ERC20_ABI = [
@@ -12,7 +13,7 @@ const ERC20_ABI = [
     "event Transfer(address indexed from, address indexed to, uint amount)"
 ];
 
-const address = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // DAI Contract
+const address = '0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0'// MATIC Contract
 const contract = new ethers.Contract(address, ERC20_ABI, provider)
 
 const main = async () => {

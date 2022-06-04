@@ -1,5 +1,6 @@
 const { isCommunityResourcable } = require("@ethersproject/providers");
 const { ethers } = require("ethers");
+require('dotenv').config();
 
 const INFURA_ID = process.env.PRIVATE_KEY;
 const provider = new ethers.providers.JsonRpcProvider(`https://rinkeby.infura.io/v3/${INFURA_ID}`)
@@ -7,7 +8,8 @@ const provider = new ethers.providers.JsonRpcProvider(`https://rinkeby.infura.io
 const account1 = '0xFF985509Aa523FE9cd3d0A6891fCB9f2A4134feE'
 const account2 = '0x3404446637B0Ec81eb53E9F1B48c907de0860287'
 
-const privateKey1 = 'ec3389a00380d5e0c27748c12138ff4984834dbc9967a9a5ac29426db011766c'
+const privateKey1 = process.env.PRIVATE_KEY1
+
 const wallet = new ethers.Wallet(privateKey1, provider)
 
 

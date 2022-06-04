@@ -1,7 +1,7 @@
 const { isCommunityResourcable } = require("@ethersproject/providers");
 const { ethers } = require("ethers");
 
-const INFURA_ID = '5fc3736954c847d18acfb32d5c762cb7'
+const INFURA_ID = process.env.PRIVATE_KEY;
 const provider = new ethers.providers.JsonRpcProvider(`https://rinkeby.infura.io/v3/${INFURA_ID}`)
 
 const account1 = '0xFF985509Aa523FE9cd3d0A6891fCB9f2A4134feE'

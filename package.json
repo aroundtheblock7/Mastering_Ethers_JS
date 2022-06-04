@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "add-gitignore": "^1.1.1",
+    "dotenv": "^16.0.1",
     "ethers": "^5.5.4"
   }
 }
